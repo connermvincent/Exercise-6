@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Untitled Document</title>
+    
+    <style>
+        #planet {
+            font-weight: bold;
+            color: crimson;
+        }    
+    </style>
+
+</head>
+
+<body>
+
+<div id="main">
+
+</div> 
+
+<script>
+    var planetNames = ["Jupiter", "Venus", "Saturn", "Mars", "Tyrole"];
+    var distancesFromEarth = [5.2, 0.72, 9.5, 1.5, 93];
+    var sunnyInAugust = [false, true, false, true, false];
+    var main = document.getElementById("main");
+
+    for(var i = 0; i < planetNames.length; i++)
+    {
+        var newPlanet = document.createElement("span");
+        newPlanet.id = "planet";
+        newPlanet.innerHTML = planetNames[i] + "<br>";
+        main.appendChild(newPlanet);
+        
+        // main.app += planetNames[i] + "<br>";
+        if (sunnyInAugust[i])
+            {
+                main.innerHTML += "sunny in august<br>";
+            }
+        main.innerHTML += distancesFromEarth[i] + "<br>";
+        main.innerHTML += sunnyInAugust[i] + "<br>";
+        main.innerHTML += "----------<br>";
+    }
+
+</script>
+
+</body>
+</html>
